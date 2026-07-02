@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles } from "lucide-react";
+import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles, Heart, Triangle, Atom, Gem, Bot } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,11 +56,11 @@ const projects = [
 ];
 
 const stack = [
-  { name: "Lovable", slug: "heart", color: "FF4D8D" },
-  { name: "Vercel", slug: "vercel", color: "000000" },
-  { name: "React", slug: "react", color: "61DAFB" },
-  { name: "Google Gemini", slug: "googlegemini", color: "8E75B2" },
-  { name: "Claude", slug: "anthropic", color: "D97757" },
+  { name: "Lovable", Icon: Heart, color: "#FF4D8D" },
+  { name: "Vercel", Icon: Triangle, color: "#000000" },
+  { name: "React", Icon: Atom, color: "#61DAFB" },
+  { name: "Google Gemini", Icon: Gem, color: "#8E75B2" },
+  { name: "Claude", Icon: Bot, color: "#D97757" },
 ];
 
 function Portfolio() {
@@ -192,11 +192,10 @@ function Stack() {
               key={s.name}
               className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-4 transition hover:border-accent/60 hover:-translate-y-0.5"
             >
-              <img
-                src={`https://cdn.simpleicons.org/${s.slug}/${s.color}`}
-                alt={`${s.name} logo`}
+              <s.Icon
                 className="h-7 w-7 shrink-0"
-                loading="lazy"
+                style={{ color: s.color }}
+                aria-hidden
               />
               <span className="truncate text-base md:text-lg font-display">
                 {s.name}
