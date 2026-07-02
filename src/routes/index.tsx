@@ -264,7 +264,7 @@ function Contact() {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      const res = await fetch("https://formspree.io/f/mgoodluck", {
+      const res = await fetch("https://formspree.io/f/meebpzqz", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -318,7 +318,7 @@ function Contact() {
 
         <form
           onSubmit={onSubmit}
-          action="https://formspree.io/f/mgoodluck"
+          action="https://formspree.io/f/meebpzqz"
           method="POST"
           className="md:col-span-7 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 md:p-8 space-y-4"
         >
