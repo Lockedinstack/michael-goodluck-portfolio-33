@@ -56,11 +56,11 @@ const projects = [
 ];
 
 const stack = [
-  { name: "Lovable", slug: "heart", color: "FF4D8D" },
-  { name: "Vercel", slug: "vercel", color: "000000" },
-  { name: "React", slug: "react", color: "61DAFB" },
-  { name: "Google Gemini", slug: "googlegemini", color: "8E75B2" },
-  { name: "Claude", slug: "anthropic", color: "D97757" },
+  { name: "Lovable", Icon: Heart, color: "#FF4D8D" },
+  { name: "Vercel", Icon: Triangle, color: "#000000" },
+  { name: "React", Icon: Atom, color: "#61DAFB" },
+  { name: "Google Gemini", Icon: Gem, color: "#8E75B2" },
+  { name: "Claude", Icon: Bot, color: "#D97757" },
 ];
 
 function Portfolio() {
