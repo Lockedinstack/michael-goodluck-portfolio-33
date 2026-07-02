@@ -192,11 +192,10 @@ function Stack() {
               key={s.name}
               className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-4 transition hover:border-accent/60 hover:-translate-y-0.5"
             >
-              <img
-                src={`https://cdn.simpleicons.org/${s.slug}/${s.color}`}
-                alt={`${s.name} logo`}
+              <s.Icon
                 className="h-7 w-7 shrink-0"
-                loading="lazy"
+                style={{ color: s.color }}
+                aria-hidden
               />
               <span className="truncate text-base md:text-lg font-display">
                 {s.name}
