@@ -216,7 +216,7 @@ function Projects() {
         <div className="flex items-end justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
-              [ 03 ] Featured Projects
+              Featured Projects
             </p>
             <h2 className="mt-3 text-3xl md:text-4xl">Selected work.</h2>
           </div>
