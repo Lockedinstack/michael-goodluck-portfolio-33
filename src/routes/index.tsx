@@ -147,7 +147,7 @@ function About() {
       <div className="container-tight grid gap-12 py-24 md:grid-cols-12">
         <div className="md:col-span-4">
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
-            [ 01 ] About
+            About
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl">I build things.</h2>
         </div>
