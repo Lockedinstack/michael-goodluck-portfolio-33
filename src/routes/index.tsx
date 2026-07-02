@@ -179,30 +179,28 @@ function Stack() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
-              [ 02 ] Technical Stack
+              Technical Stack
             </p>
             <h2 className="mt-3 text-3xl md:text-4xl max-w-xl">
               A lean toolkit engineered for velocity.
             </h2>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {stack.map((s) => (
             <div
-              key={s.title}
-              className="group rounded-xl border border-border bg-card p-6 transition hover:border-accent/60"
+              key={s.name}
+              className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-4 transition hover:border-accent/60 hover:-translate-y-0.5"
             >
-              <p className="text-xs uppercase tracking-widest text-muted-foreground">
-                {s.title}
-              </p>
-              <ul className="mt-4 space-y-2">
-                {s.items.map((i) => (
-                  <li key={i} className="flex items-center gap-2 text-lg font-display">
-                    <span className="h-1 w-1 rounded-full bg-accent" />
-                    {i}
-                  </li>
-                ))}
-              </ul>
+              <img
+                src={`https://cdn.simpleicons.org/${s.slug}/${s.color}`}
+                alt={`${s.name} logo`}
+                className="h-7 w-7 shrink-0"
+                loading="lazy"
+              />
+              <span className="truncate text-base md:text-lg font-display">
+                {s.name}
+              </span>
             </div>
           ))}
         </div>
