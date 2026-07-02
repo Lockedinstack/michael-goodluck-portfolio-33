@@ -56,9 +56,11 @@ const projects = [
 ];
 
 const stack = [
-  { title: "Core Tools", items: ["Lovable", "Vercel"] },
-  { title: "AI Stack", items: ["Google Gemini", "Claude"] },
-  { title: "Capabilities", items: ["Web Apps", "Mobile Apps", "AI-driven Automation"] },
+  { name: "Lovable", slug: "heart", color: "FF4D8D" },
+  { name: "Vercel", slug: "vercel", color: "000000" },
+  { name: "React", slug: "react", color: "61DAFB" },
+  { name: "Google Gemini", slug: "googlegemini", color: "8E75B2" },
+  { name: "Claude", slug: "anthropic", color: "D97757" },
 ];
 
 function Portfolio() {
