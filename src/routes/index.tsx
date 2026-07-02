@@ -282,7 +282,7 @@ function Contact() {
     <section id="contact" className="border-b border-border bg-primary text-primary-foreground">
       <div className="container-tight py-24 grid gap-12 md:grid-cols-12">
         <div className="md:col-span-5">
-          <p className="text-xs uppercase tracking-widest opacity-60">[ 04 ] Contact</p>
+          <p className="text-xs uppercase tracking-widest opacity-60">Contact</p>
           <h2 className="mt-3 text-4xl md:text-5xl">Let's build something.</h2>
           <p className="mt-4 text-primary-foreground/70 max-w-md">
             Have a project in mind or want to move fast on an idea? Drop a message
