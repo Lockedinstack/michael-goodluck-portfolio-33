@@ -1,6 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles, Heart, Triangle, Atom, Gem, Bot } from "lucide-react";
+import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles } from "lucide-react";
+import lovableIcon from "@/assets/lovable.jpg.asset.json";
+import geminiIcon from "@/assets/gemini.jpg.asset.json";
+import claudeIcon from "@/assets/claude.jpg.asset.json";
+
+const VercelIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+    <path d="M12 2L2 20h20L12 2z" />
+  </svg>
+);
+
+const ReactIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="-11.5 -10.23174 23 20.46348" aria-hidden {...props}>
+    <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+    <g stroke="#61DAFB" strokeWidth="1" fill="none">
+      <ellipse rx="11" ry="4.2" />
+      <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+      <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+    </g>
+  </svg>
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({
