@@ -1,6 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles, Heart, Triangle, Atom, Gem, Bot } from "lucide-react";
+import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles } from "lucide-react";
+import lovableIcon from "@/assets/lovable.jpg.asset.json";
+import geminiIcon from "@/assets/gemini.jpg.asset.json";
+import claudeIcon from "@/assets/claude.jpg.asset.json";
+
+const VercelIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
+    <path d="M12 2L2 20h20L12 2z" />
+  </svg>
+);
+
+const ReactIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="-11.5 -10.23174 23 20.46348" aria-hidden {...props}>
+    <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+    <g stroke="#61DAFB" strokeWidth="1" fill="none">
+      <ellipse rx="11" ry="4.2" />
+      <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+      <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+    </g>
+  </svg>
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,11 +76,11 @@ const projects = [
 ];
 
 const stack = [
-  { name: "Lovable", Icon: Heart, color: "#FF4D8D" },
-  { name: "Vercel", Icon: Triangle, color: "#000000" },
-  { name: "React", Icon: Atom, color: "#61DAFB" },
-  { name: "Google Gemini", Icon: Gem, color: "#8E75B2" },
-  { name: "Claude", Icon: Bot, color: "#D97757" },
+  { name: "Lovable", type: "img" as const, src: lovableIcon.url },
+  { name: "Vercel", type: "svg" as const, Icon: VercelIcon, color: "currentColor" },
+  { name: "React", type: "svg" as const, Icon: ReactIcon },
+  { name: "Google Gemini", type: "img" as const, src: geminiIcon.url },
+  { name: "Claude", type: "img" as const, src: claudeIcon.url },
 ];
 
 function Portfolio() {
@@ -192,11 +212,18 @@ function Stack() {
               key={s.name}
               className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-4 transition hover:border-accent/60 hover:-translate-y-0.5"
             >
-              <s.Icon
-                className="h-7 w-7 shrink-0"
-                style={{ color: s.color }}
-                aria-hidden
-              />
+              {s.type === "img" ? (
+                <img
+                  src={s.src}
+                  alt={`${s.name} logo`}
+                  className="h-8 w-8 shrink-0 rounded object-contain"
+                />
+              ) : (
+                <s.Icon
+                  className="h-7 w-7 shrink-0"
+                  style={s.color ? { color: s.color } : undefined}
+                />
+              )}
               <span className="truncate text-base md:text-lg font-display">
                 {s.name}
               </span>
