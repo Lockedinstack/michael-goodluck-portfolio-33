@@ -236,6 +236,64 @@ function Stack() {
   );
 }
 
+function Certifications() {
+  const skills = [
+    "Prompt Engineering",
+    "AI Ethics & Responsible AI",
+    "Data Analytics Fundamentals",
+    "Professional Portfolio Development",
+  ];
+  return (
+    <section id="certifications" className="border-b border-border">
+      <div className="container-tight py-24">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <p className="text-xs uppercase tracking-widest text-muted-foreground">
+              Certifications
+            </p>
+            <h2 className="mt-3 text-3xl md:text-4xl">Verified credentials.</h2>
+          </div>
+        </div>
+        <div className="mt-12 grid gap-8 md:grid-cols-5 rounded-2xl border border-border bg-card p-6 md:p-8">
+          <div className="md:col-span-3 overflow-hidden rounded-xl border border-border bg-muted">
+            <img
+              src="/assets/ai-career-essentials.png"
+              alt="AI Career Essentials Certificate of Achievement"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="md:col-span-2 flex flex-col justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">
+                ALX Africa
+              </p>
+              <h3 className="mt-2 text-2xl md:text-3xl">
+                AI Career Essentials Certification
+              </h3>
+              <ul className="mt-6 space-y-2.5 text-sm text-foreground/85">
+                {skills.map((s) => (
+                  <li key={s} className="flex items-start gap-2.5">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a
+              href="https://ehub.alxafrica.com/certificates/verify/bf969507-63c8-462d-b724-ff231054a3fe"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
+            >
+              View Credential <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Projects() {
   return (
     <section id="projects" className="border-b border-border">
