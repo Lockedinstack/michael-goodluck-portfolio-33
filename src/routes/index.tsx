@@ -90,6 +90,7 @@ function Portfolio() {
       <Hero />
       <About />
       <Stack />
+      <Certifications />
       <Projects />
       <Contact />
       <Footer />
