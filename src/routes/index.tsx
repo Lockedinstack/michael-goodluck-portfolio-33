@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowUpRight, Github, Twitter, MessageCircle, Mail, Sparkles } from "lucide-react";
-import lovableIcon from "@/assets/lovable.jpg.asset.json";
-import geminiIcon from "@/assets/gemini.jpg.asset.json";
-import claudeIcon from "@/assets/claude.jpg.asset.json";
+const lovableIcon = { url: "/stack/lovable.jpg" };
+const geminiIcon = { url: "/stack/gemini.jpg" };
+const claudeIcon = { url: "/stack/claude.jpg" };
 
 const VercelIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden {...props}>
