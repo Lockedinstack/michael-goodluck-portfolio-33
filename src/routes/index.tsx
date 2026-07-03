@@ -212,11 +212,18 @@ function Stack() {
               key={s.name}
               className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-4 transition hover:border-accent/60 hover:-translate-y-0.5"
             >
-              <s.Icon
-                className="h-7 w-7 shrink-0"
-                style={{ color: s.color }}
-                aria-hidden
-              />
+              {s.type === "img" ? (
+                <img
+                  src={s.src}
+                  alt={`${s.name} logo`}
+                  className="h-8 w-8 shrink-0 rounded object-contain"
+                />
+              ) : (
+                <s.Icon
+                  className="h-7 w-7 shrink-0"
+                  style={s.color ? { color: s.color } : undefined}
+                />
+              )}
               <span className="truncate text-base md:text-lg font-display">
                 {s.name}
               </span>
